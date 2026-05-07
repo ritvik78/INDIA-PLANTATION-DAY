@@ -46,14 +46,15 @@ export default function WallOfHeroes() {
           >
             The Wall of Heroes is the permanent record of founding supporters. Every name is an action. Every action is a signal that we can make a difference.
           </motion.p>
-          <motion.button
+          <motion.a
+            href="#get-involved"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-earth-green hover:bg-earth-green-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-lg shadow-earth-green/20"
+            className="inline-block bg-earth-green hover:bg-earth-green-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-lg shadow-earth-green/20"
           >
             Get on the wall
-          </motion.button>
+          </motion.a>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">

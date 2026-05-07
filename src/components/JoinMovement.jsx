@@ -86,10 +86,15 @@ export default function JoinMovement() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 active:scale-95">
+            <a 
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260605T000000Z%2F20260606T000000Z&text=World+Environment+Day+-+India+Plantation+Day&details=Join+the+movement+to+protect+our+planet!&location=Worldwide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
+            >
               <Calendar className="h-5 w-5 text-earth-blue" />
               Add to Google Calendar
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
