@@ -115,7 +115,7 @@ export default function Hero() {
           
           <div className="mt-10 flex justify-center">
             <a 
-              href="https://www.instagram.com/plantindiaday?igsh=MWZuZzM4eGZ3YXczbA=="
+              href="https://www.instagram.com/plantindiaday"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30"
