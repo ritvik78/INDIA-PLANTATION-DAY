@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Instagram } from 'lucide-react';
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -104,7 +105,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-12"
+          className="mt-12 flex flex-col items-center"
         >
           <div className="text-5xl md:text-7xl font-black text-white drop-shadow-lg tabular-nums">
             {participantCount.toLocaleString()}
@@ -112,6 +113,15 @@ export default function Hero() {
           <p className="text-lg text-earth-green mt-2 font-medium tracking-wide uppercase">
             People who joined the mission
           </p>
+          <a
+            href="https://instagram.com/india.plantation.day"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 flex items-center gap-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg"
+          >
+            <Instagram className="w-6 h-6" />
+            Join our movement on Instagram
+          </a>
         </motion.div>
       </div>
     </div>
