@@ -31,7 +31,7 @@ export default function Hero() {
 
   useEffect(() => {
     // Animate participant counter
-    const target = 1;
+    const target = 4;
     const duration = 2000;
     const steps = 60;
     const stepTime = Math.abs(Math.floor(duration / steps));
@@ -102,7 +102,7 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 4 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-12"
         >
