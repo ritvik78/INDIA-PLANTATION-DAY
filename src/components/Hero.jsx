@@ -102,8 +102,8 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 5, delay: 0.8 }}
+          animate={{ opacity: 4 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="mt-12"
         >
           <div className="text-5xl md:text-7xl font-black text-white drop-shadow-lg tabular-nums">
