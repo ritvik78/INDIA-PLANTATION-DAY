@@ -3,14 +3,20 @@ import { Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function JoinMovement() {
+export default function JoinMovement({ onJoin }) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email) setIsSubscribed(true);
+    if (email && name) {
+      setIsSubscribed(true);
+      if (onJoin) {
+        onJoin(name);
+      }
+    }
   };
 
   return (
@@ -34,8 +40,16 @@ export default function JoinMovement() {
         >
           {!isSubscribed ? (
             <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
-              <div>
-                <div className="relative flex items-center">
+              <div className="flex flex-col md:flex-row gap-4">
+                <input 
+                  type="text" 
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name" 
+                  className="w-full bg-slate-800/50 border border-slate-700 text-white px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-earth-green focus:border-transparent transition-all placeholder-gray-500"
+                />
+                <div className="relative flex items-center flex-1">
                   <input 
                     type="email" 
                     required

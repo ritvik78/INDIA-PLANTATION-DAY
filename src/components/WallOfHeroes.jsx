@@ -2,28 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const heroes = [
-  { name: "Rahul K.", country: "IN" },
-  { name: "Sarah M.", country: "US" },
-  { name: "Li W.", country: "CN" },
-  { name: "Emma T.", country: "UK" },
-  { name: "Carlos R.", country: "BR" },
-  { name: "Yuki S.", country: "JP" },
-  { name: "Anna K.", country: "RU" },
-  { name: "Omar F.", country: "EG" },
-  { name: "Mia L.", country: "CA" },
-  { name: "Lucas P.", country: "FR" },
-  { name: "Priya S.", country: "IN" },
-  { name: "John D.", country: "AU" },
-  { name: "Maria G.", country: "MX" },
-  { name: "Hans M.", country: "DE" },
-  { name: "Fatima A.", country: "AE" },
-  { name: "David C.", country: "ZA" },
-  { name: "Elena V.", country: "IT" },
-  { name: "Kim J.", country: "KR" },
-];
-
-export default function WallOfHeroes() {
+export default function WallOfHeroes({ heroes }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
