@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import JoinMovement from './components/JoinMovement'
@@ -7,7 +7,14 @@ import WallOfHeroes from './components/WallOfHeroes'
 import Footer from './components/Footer'
 
 function App() {
-  const [heroes, setHeroes] = useState([]);
+  const [heroes, setHeroes] = useState(() => {
+    const saved = localStorage.getItem('heroes');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('heroes', JSON.stringify(heroes));
+  }, [heroes]);
 
   const handleJoin = (name) => {
     const newHero = { name, country: "IN" };
